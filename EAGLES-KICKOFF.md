@@ -1,28 +1,28 @@
-# EAGLES Kickoff — HOUSSINE
+# EAGLES Kickoff - HOUSSINE
 
-## Assigned Microservice: [5.11] Reporting & Analytics
+## Assigned Microservice: [5.3] Hiring Management
 
-**Repo**: [rh-optimerp-reporting-and-analytics](https://github.com/ERP-CORE-DEV/rh-optimerp-reporting-and-analytics)
-**Issue**: [#15](https://github.com/ERP-CORE-DEV/rh-optimerp-reporting-and-analytics/issues/15)
+**Repo**: [rh-optimerp-hiring-management](https://github.com/ERP-CORE-DEV/rh-optimerp-hiring-management)
+**Syncs with**: LAHCEN (5.2 Candidate Evaluation) upstream
 
 ---
 
-## Phase 1 — Plan (uses 1 planner agent, isolated context)
+## Phase 1 - Plan (uses 1 planner agent, isolated context)
 ```
-/plan reporting-and-analytics microservice — Controller-Service-Repository, .NET 8, CosmosDB SDK 3.54, React 18 + Ant Design, French HR compliance (bilan social, index egalite, BDESE). Reference: rh-optimerp-sourcing-candidate-attraction repo.
-```
-
-## Phase 2 — Scaffold (after plan approval)
-```
-/scaffold reporting-and-analytics
+/plan hiring-management microservice - Controller-Service-Repository, .NET 8, CosmosDB SDK 3.54, React 18 + Ant Design, French HR compliance (promesse d embauche, DPAE, contrat de travail, periode d essai, convention collective). Reference: rh-optimerp-sourcing-candidate-attraction repo.
 ```
 
-## Phase 3 — TDD first feature
+## Phase 2 - Scaffold (after plan approval)
 ```
-/tdd hr-dashboard-reporting
+/scaffold hiring-management
 ```
 
-## Phase 4 — Pre-PR validation
+## Phase 3 - TDD first feature
+```
+/tdd interview-scheduling-workflow
+```
+
+## Phase 4 - Pre-PR validation
 ```
 /code-review
 /security-scan
@@ -35,10 +35,10 @@
 - **Pattern**: Controller-Service-Repository (NOT CQRS/MediatR)
 - **Database**: CosmosDB SDK 3.54 direct (NOT EF Core)
 - **GDPR**: AnonymizeXxx() on personal data models + IsAnonymized flag
-- **French HR**: Bilan social, index egalite professionnelle, BDESE reporting
+- **French HR**: Promesse d embauche, DPAE, contrat de travail, periode d essai, convention collective
 - **Tests**: xUnit + FluentAssertions + Moq, minimum 80% coverage
 - **Commits**: Conventional commits (feat/fix/refactor/test/docs)
-- **Integration dependencies**: Watches [5.8] Talent Management and [5.10] HR Digitalization
+- **Integration dependencies**: Watches [5.2] Candidate Evaluation and [5.4] Legal and Regulatory Compliance
 
 ## Reference Repo
 Use [rh-optimerp-sourcing-candidate-attraction](https://github.com/ERP-CORE-DEV/rh-optimerp-sourcing-candidate-attraction) as the architecture reference.
